@@ -1,0 +1,218 @@
+{
+  "name": "bento",
+  "displayName": "Bento",
+  "description": "Tidy your activity bar. Drag views from any extension into a container of your own, name it whatever you like, and lose the icons you no longer need.",
+  "version": "0.1.0",
+  "publisher": "haritha",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harithamadana/vscode-bento.git"
+  },
+  "bugs": {
+    "url": "https://github.com/harithamadana/vscode-bento/issues"
+  },
+  "homepage": "https://github.com/harithamadana/vscode-bento#readme",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "activity bar",
+    "sidebar",
+    "views",
+    "layout",
+    "declutter",
+    "workspace",
+    "organize"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "bento1",
+          "title": "%bento1.title%",
+          "icon": "media/bento-1.svg"
+        },
+        {
+          "id": "bento2",
+          "title": "%bento2.title%",
+          "icon": "media/bento-2.svg"
+        },
+        {
+          "id": "bento3",
+          "title": "%bento3.title%",
+          "icon": "media/bento-3.svg"
+        },
+        {
+          "id": "bento4",
+          "title": "%bento4.title%",
+          "icon": "media/bento-4.svg"
+        },
+        {
+          "id": "bento5",
+          "title": "%bento5.title%",
+          "icon": "media/bento-5.svg"
+        },
+        {
+          "id": "bento6",
+          "title": "%bento6.title%",
+          "icon": "media/bento-6.svg"
+        }
+      ]
+    },
+    "views": {
+      "bento1": [
+        {
+          "id": "bento1.gettingStarted",
+          "name": "Getting Started",
+          "icon": "media/bento-1.svg"
+        }
+      ],
+      "bento2": [
+        {
+          "id": "bento2.gettingStarted",
+          "name": "Getting Started",
+          "icon": "media/bento-2.svg",
+          "when": "config.bento.group2"
+        }
+      ],
+      "bento3": [
+        {
+          "id": "bento3.gettingStarted",
+          "name": "Getting Started",
+          "icon": "media/bento-3.svg",
+          "when": "config.bento.group3"
+        }
+      ],
+      "bento4": [
+        {
+          "id": "bento4.gettingStarted",
+          "name": "Getting Started",
+          "icon": "media/bento-4.svg",
+          "when": "config.bento.group4"
+        }
+      ],
+      "bento5": [
+        {
+          "id": "bento5.gettingStarted",
+          "name": "Getting Started",
+          "icon": "media/bento-5.svg",
+          "when": "config.bento.group5"
+        }
+      ],
+      "bento6": [
+        {
+          "id": "bento6.gettingStarted",
+          "name": "Getting Started",
+          "icon": "media/bento-6.svg",
+          "when": "config.bento.group6"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "bento1.gettingStarted",
+        "contents": "This container is empty.\n\nDrag a view's title bar from any other activity bar container and drop it here. Then right-click the icon it came from and choose Hide from Activity Bar.\n\nTurn more containers on in [settings](command:workbench.action.openSettings?%22bento%22)."
+      },
+      {
+        "view": "bento2.gettingStarted",
+        "contents": "This container is empty.\n\nDrag a view's title bar from any other activity bar container and drop it here. Then right-click the icon it came from and choose Hide from Activity Bar.\n\nTurn more containers on in [settings](command:workbench.action.openSettings?%22bento%22)."
+      },
+      {
+        "view": "bento3.gettingStarted",
+        "contents": "This container is empty.\n\nDrag a view's title bar from any other activity bar container and drop it here. Then right-click the icon it came from and choose Hide from Activity Bar.\n\nTurn more containers on in [settings](command:workbench.action.openSettings?%22bento%22)."
+      },
+      {
+        "view": "bento4.gettingStarted",
+        "contents": "This container is empty.\n\nDrag a view's title bar from any other activity bar container and drop it here. Then right-click the icon it came from and choose Hide from Activity Bar.\n\nTurn more containers on in [settings](command:workbench.action.openSettings?%22bento%22)."
+      },
+      {
+        "view": "bento5.gettingStarted",
+        "contents": "This container is empty.\n\nDrag a view's title bar from any other activity bar container and drop it here. Then right-click the icon it came from and choose Hide from Activity Bar.\n\nTurn more containers on in [settings](command:workbench.action.openSettings?%22bento%22)."
+      },
+      {
+        "view": "bento6.gettingStarted",
+        "contents": "This container is empty.\n\nDrag a view's title bar from any other activity bar container and drop it here. Then right-click the icon it came from and choose Hide from Activity Bar.\n\nTurn more containers on in [settings](command:workbench.action.openSettings?%22bento%22)."
+      }
+    ],
+    "configuration": {
+      "title": "Bento",
+      "properties": {
+        "bento.names": {
+          "type": "object",
+          "default": {},
+          "additionalProperties": {
+            "type": "string"
+          },
+          "markdownDescription": "Custom names for each container, e.g. `{ \"bento1\": \"AI Tools\" }`. Changing a name requires a window reload — Bento will prompt you. Leave a container out to keep its default name.",
+          "properties": {
+            "bento1": {
+              "type": "string"
+            },
+            "bento2": {
+              "type": "string"
+            },
+            "bento3": {
+              "type": "string"
+            },
+            "bento4": {
+              "type": "string"
+            },
+            "bento5": {
+              "type": "string"
+            },
+            "bento6": {
+              "type": "string"
+            }
+          }
+        },
+        "bento.group2": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show the Bento 2 container in the activity bar."
+        },
+        "bento.group3": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show the Bento 3 container in the activity bar."
+        },
+        "bento.group4": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show the Bento 4 container in the activity bar."
+        },
+        "bento.group5": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show the Bento 5 container in the activity bar."
+        },
+        "bento.group6": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show the Bento 6 container in the activity bar."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/vscode": "^1.90.0",
+    "@vscode/vsce": "^3.9.2",
+    "typescript": "^5.5.0"
+  },
+  "icon": "media/icon.png",
+  "galleryBanner": {
+    "color": "#1F2430",
+    "theme": "dark"
+  }
+}
