@@ -1,4 +1,4 @@
-# Bento
+# Bento Containers
 
 **Empty containers for your activity bar. Put whatever you want in them.**
 
